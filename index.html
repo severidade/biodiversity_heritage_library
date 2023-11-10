@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109361301-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109361301-1');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>Biodiversity Heritage Library</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/busca.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/blog.css">
+
+
+	<!-- Muda a cor da barra do navegador no celular-->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#d4d1c4">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#d4d1c4">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#d4d1c4">
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+
+	<!-- TAGS Facebook -->
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="http://www.severidade.com.br/bhl">
+	<meta property="og:image" content="img/avatar.jpg">
+	<meta property="og:site_name" content="Biodiversity Heritage Library - improves research methodology by collaboratively making biodiversity literature openly available to the world as part of a global biodiversity community">
+	<meta property="og:type" content="website">
+
+
+</head>
+	<body>
+
+	<header class="menu">
+		<!-- 
+			- O navbar fica fixo após o scroll;
+			- Fiz o menu em dois níveis podendo haver a opção direta e a que abre a aba secundária.
+			- Estudar possibilidade de um nível interno terceiro nível que nao faz parte do menu lateral
+
+		-->
+			<div class="navbar">
+				<div class="hamburguer"><div class="hotspot"></div></div>
+				<a href="" class="title">
+					<h1>Biodiversity Heritage Library</h1>
+				</a>
+			</div>
+
+			<div id="search">
+				<div id="modal-search" class="modalSearch">
+					<div id="content">
+						
+							<form id="search-form" method="get" action="" class="" role="search">	
+								<button type="button" id="closeButton">Close</button>
+								<div id="menu-modal">
+									<div class="busca">
+									  <input type="search" placeholder="Search" class="place">
+								    </div>
+									<button id="submitButton" type="submit"></button>	
+								</div>
+								
+								<div id="search-elements-div">
+								    <div class="advanced-options group flex-grid" id="advanced-options" data-grid-type="fill">
+								    	<p>Browse by:</p>
+								    	<div class="search-options search-option-radio-row">
+										    <div class="option">
+										      	<input name="type" type="radio" value="type-pens" id="type-pens" >
+										     	<label for="type-pens">
+													<div id="iconetitulo">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.004 512.004"><path d="M291 242.8c1.6 3 4.6 4.7 7.7 4.7 1.3 0 2.6-.3 3.8-1 .5-.2 50.8-25.7 75.5-33.6 4.5-2 7-7 5.6-11-1.4-5-6.2-7-10.7-6-27 8-76 33-79 34-4 2-6 7-4 11zm7.7-97.8c1.3 0 2.6-.2 3.8-1 .5 0 50.8-25.6 75.5-33.5 4.5-1.4 7-6.2 5.6-10.7-1.4-4.5-6.2-7-10.7-5.5-27 8.2-76 33.7-79 34.7-5 2-6 7-4 11 1 3 4 4.5 7 4.5z"/><path d="M503.5 128c-4.8 0-8.6 3.8-8.6 8.5v332.8c0 14.2-12 25.6-26 25.6H264v-20c12.5-5 45-15 76.8-15 74.5 0 125 16 125.4 16 2.6 1 5.5 0 7.7-1 2-2 3-5 3-7V94c0-4-3-7.6-7-8.5L452 82c-5-1-9 2-10 6s2 9 7 10l10.4 2v358c-19.2-5-62.2-15-119.5-15-37 0-74 12-85 16.3-10-4-40-16-77-16-59 0-107 10-128 15V101c17-4 67-15 128-15 31 0 58 9.5 68 14v335.7c0 3 1.2 6 4 7.4 2.5 2 6 2 8.4 0 1 0 86-51 161-76 3.4-1 6-4 6-8V9c0-3-1.6-5.7-4-7-2.7-2-5.6-2-8-1-68 25-137 68-138 68.3-4 2.5-5 7.7-2.5 11.7 2.6 4 8 5.4 12 3 1-.5 61-38 124-63v331c-58 20.3-119 53.4-145 68V94c0-3.4-2-6.3-5-7.8-1-.7-36-18-80-18-77 0-136 16.8-139 17.5-3.4 1-6 4.4-6 8.2v375c0 2 1 5 3.4 6 1.6 1 3.4 2 5 2 1 0 1.7 0 2.5-1 .4 0 59.4-17 134-17 31.3 0 58 9 68.4 14v20H43c-14 0-25.6-12-25.6-26V136c0-4.7-3.7-8.5-8.4-8.5s-9 4-9 8.2v333c0 24 19 43 42.7 43h426.6c23.6 0 42.7-19 42.7-42.7V136.6c0-4.7-3.8-8.5-8.5-8.5z"/><path d="M291 191.6c1.6 3 4.6 4.7 7.7 4.7 1.3 0 2.6-.3 3.8-1 .5-.2 50.8-25.7 75.5-33.6 4.5-1.4 7-6.2 5.6-10.7-1.4-4.5-6.2-7-10.7-5.5-27 8.2-76 33.5-79 34.5-5 3-6 8-4 12zm0 102.4c1.6 3 4.6 4.7 7.7 4.7 1.3 0 2.6-.3 3.8-1 .5-.2 50.8-25.7 75.5-33.6 4.5-1 7-6 5.6-10-1.4-4-6.2-7-10.7-5-27 8-76 34-79 35-4 2-6 8-4 12zm-84.3-135.6c-52.6-12.4-112.5 3.4-115 4-4.6 1.2-7.3 6-6 10.5 1 3 4.4 6 8.2 6 0 0 1 0 2-1 0 0 58-16 107-4 4 1 9-2 10-7s-2-9-7-10zm0 51.2c-52.6-12.4-112.5 3.4-115 4-4.6 1.2-7.3 6-6 10.5 1 4 4.4 7 8.2 7h2s58-15 107-4c4 1 9-2 10-6s-2-9-7-10zM291 345.2c1.6 3 4.6 4.7 7.7 4.7 1.3 0 2.6-1 3.8-1 .5-1 50.8-26 75.5-34 4.5-2 7-6 5.6-11-1.4-5-6.2-7-10.7-6-27 8-76 33-79 34-5 2-6 7-4 11zm-84.3-84.4c-52.6-12.4-112.5 3.3-115 4-4.6 1.2-7.3 6-6 10.5 1 3.8 4.4 6.3 8.2 6.3 0 0 1 0 2-.3 0 0 58-15.3 107-4 4 1 9-1.7 10-6.3s-2-9.2-7-10.2zm0 102.4c-52.6-12.4-112.5 3.4-115 4-4.6 1.2-7.3 6-6 10.5 1 3.8 4.4 6.3 8.2 6.3 0 0 1 0 2-.3 0 0 58-15.3 107-4 4 1 9-1.7 10-6.3s-2-9.2-7-10.2zm0-51.2c-52.6-12.4-112.5 3.3-115 4-4.6 1.2-7.3 6-6 10.5 1 3.8 4.4 6.3 8.2 6.3 0 0 1 0 2-.3 0 0 58-15.3 107-4 4 1 9-1.7 10-6.3s-2-9.2-7-10.2z"/></svg>
+													</div>
+
+													<span>Title</span>
+												</label>
+										    </div>
+										    <div class="option">
+										      <input name="type" type="radio" value="type-projects" id="type-projects">
+										      <label for="type-projects">
+													<div id="iconeAuthor">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M186.5 95.6c-1-.3-2-.5-3-.5-4.5 0-8.3 3-9.6 7-2 5.3 1 11 6.3 12.7 1 .3 2 .5 3 .5 4.4 0 8.2-2.8 9.6-7 1.6-5.2-1.3-11-6.5-12.6z"/><path d="M178.3 422.5l45.5-54c1.2-1.2 2-3 2.3-4.7.2-.7 11-67.4 14.4-144 4.6-104.5-6.4-177-32.6-215.4-1.7-2.5-4.4-4-7.3-4.4-3-.2-6 .8-8 3-25 24.8-45.3 59.5-60.7 103-12 34.3-21.2 74.3-27 118.8-9.8 75.4-6.7 137-6.6 139.6.2 2.6 1.3 5 3.2 6.8l56.7 52c5 25.8 11.3 52.7 19 81.4 1.3 4.4 5.3 7.4 9.8 7.4 1 0 1.8 0 2.6-.4 5.3-1.4 8.5-7 7-12.2-7.3-27-13.4-52.4-18-77zM118 359.3c-.2-6.8-.5-21.5 0-41.5l29 26.7c1.3 15 3.2 30.6 5.6 46.4L118 359.2zm46.5-72.2c0-48.4 5.7-94.5 17.4-141 1.3-5.3-2-10.8-7.3-12-.8-.3-1.6-.4-2.5-.4-4.5 0-8.5 3-9.6 7.5-6.2 24.3-10.8 49-13.8 73.5-3 23.7-4.3 48.2-4.3 72.6 0 9.6.2 19 .6 28.6l-26-24c1-19.3 2.7-41.4 5.7-64.6 8.2-63.2 27.6-147.4 73-200.3 18.8 37.2 26.6 103 22.7 192-.4 10.2-1 20.3-1.7 30.2L165 312.3c-.4-8.5-.5-17-.5-25.3zm9.2 110c-3-19.2-5.4-37.7-7-55.8l49.2-58c-3.7 37.5-8 66-9.2 74.7l-33 39zM404.3 492h-27.5c-5.5 0-10 4.5-10 10s4.5 10 10 10h27.5c5.5 0 10-4.5 10-10s-4.5-10-10-10zM336.8 492c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zM296.8 492h-70c-5.5 0-10 4.5-10 10s4.5 10 10 10h70c5.5 0 10-4.5 10-10s-4.5-10-10-10z"/></svg>
+													</div>
+													<span>Author</span>
+										      </label>
+										    </div>
+										    <div class="option">
+										      <input name="type" type="radio" value="type-posts" id="type-posts">
+										      <label for="type-posts">
+													<div id="iconeDate">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><path d="M26 2.5c1.7 0 3 1.3 3 3s-1.3 3-3 3c-.6 0-1 .4-1 1s.4 1 1 1c2.8 0 5-2.2 5-5s-2.2-5-5-5c-.6 0-1 .4-1 1s.4 1 1 1zm6 0c1.7 0 3 1.3 3 3s-1.3 3-3 3c-.6 0-1 .4-1 1s.4 1 1 1c2.8 0 5-2.2 5-5s-2.2-5-5-5c-.6 0-1 .4-1 1s.4 1 1 1z"/><path d="M43 4.5c-.6-2.3-2.6-4-5-4-.6 0-1 .4-1 1s.4 1 1 1c1.7 0 3 1.3 3 3s-1.3 3-3 3c-.6 0-1 .4-1 1s.4 1 1 1c2.4 0 4.4-1.7 5-4h13v1c-.6 0-1 .4-1 1s.4 1 1 1v4c-.6 0-1 .4-1 1s.4 1 1 1v1H2v-1c.6 0 1-.4 1-1s-.4-1-1-1v-4c.6 0 1-.4 1-1s-.4-1-1-1v-1h17c.6 0 1-.4 1-1s-.4-1-1-1h-1.8c.4-1.2 1.5-2 2.8-2 1.7 0 3 1.3 3 3s-1.3 3-3 3c-.6 0-1 .4-1 1s.4 1 1 1c2.8 0 5-2.2 5-5s-2.2-5-5-5c-2.4 0-4.4 1.7-5 4H0v53h58v-53H43zm13 51H2v-37h54v37z"/><path d="M12.3 31.2c.2.2.4.3.7.3s.5 0 .7-.3L18 27v22.5h-3c-.6 0-1 .4-1 1s.4 1 1 1h8c.6 0 1-.4 1-1s-.4-1-1-1h-3V24l-.6-.3h-.8s-.2 0-.3.2l-6 6c-.4.2-.4 1 0 1.2zM30 43.5c0 4.4 3.6 8 8 8s8-3.6 8-8c0-3-1.7-5.7-4.3-7 2-1.3 3.3-3.5 3.3-6 0-4-3-7-7-7s-7 3-7 7c0 2.5 1.3 4.7 3.3 6-2.6 1.3-4.3 4-4.3 7zm3-13c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5zm5 7c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/><circle cx="8" cy="8.5" r="1"/><circle cx="8" cy="14.5" r="1"/><circle cx="5" cy="11.5" r="1"/><circle cx="11" cy="11.5" r="1"/><circle cx="14" cy="8.5" r="1"/><circle cx="14" cy="14.5" r="1"/><circle cx="20" cy="14.5" r="1"/><circle cx="17" cy="11.5" r="1"/><circle cx="23" cy="11.5" r="1"/><circle cx="26" cy="14.5" r="1"/><circle cx="32" cy="14.5" r="1"/><circle cx="29" cy="11.5" r="1"/><circle cx="35" cy="11.5" r="1"/><circle cx="44" cy="8.5" r="1"/><circle cx="38" cy="14.5" r="1"/><circle cx="44" cy="14.5" r="1"/><circle cx="41" cy="11.5" r="1"/><circle cx="47" cy="11.5" r="1"/><circle cx="50" cy="8.5" r="1"/><circle cx="50" cy="14.5" r="1"/><circle cx="53" cy="11.5" r="1"/></svg>
+													</div>
+													<span>Date</span>
+										      </label>
+										    </div>
+										    <div class="option">
+										      <input name="type" type="radio" value="type-collections" id="type-collections">
+										      <label for="type-collections">
+													<div id="iconeCollection">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 222c10.8 0 20-4.2 25.6-7.2 5.5 3 14.8 7 25.6 7 16 0 33.6-9 41.2-20.8.8-1 18.5-28.3 18.5-73 0-33-27-59.7-60-59.7-10 0-19 3.5-26 7.3-7-3.8-16-7.3-26-7.3-32 0-59 26.7-59 59.7 0 50.6 15 70.2 19 74 7 9.6 23 20 40 20zm0-136.7c7.6 0 15.4 4 21.3 7.4 2.7 1.6 6 1.6 8.6 0 5-3.4 13-7.4 21-7.4 23 0 42 19.2 42 42.7 0 39.3-16 63.3-16 63.7-4 6.2-16 13-27 13s-21-6.7-21-6.7c-2-1.2-4-1.7-5-1.7s-4 .5-5 1.7c0 0-10 6.8-21 6.8s-22-7-28-13.8l-1-.7c0-.2-14.8-16-14.8-62.3 0-23.5 19.3-42.7 43-42.7zm18.3-29.7c1.6 2.7 4.4 4 7.3 4 1.5 0 3-.3 4.4-1 4-2.5 5.3-7.7 3-11.8L263.2 4c-2.4-4-7.6-5.2-11.7-2.8-4 2.4-5.3 7.7-3 11.7l25.7 42zm26.7-1.2c.5.2 6 2 13.2 2 10.2 0 19-3.6 25.6-10 15.6-15.8 8.4-38 8-39-.7-2.6-2.7-4.6-5.3-5.4-.6-.2-6-2-13.2-2-10.2 0-19 3.5-25.7 10-15.6 15.7-8.4 38-8 39 .8 2.5 2.8 4.5 5.3 5.4zM315.6 22c3.3-3.2 8-5 13.6-5 1.2 0 2.3.2 3.3.3.5 4.6.3 11.8-4.8 17-3.4 3.2-8 5-13.6 5-1 0-2 0-3-.2 0-4 0-11 5-17zm170.8 217H76.8c-14 0-25.6 11.4-25.6 25.5v34.2c0 4.7 3.8 8.5 8.5 8.5s8.6-3.8 8.6-8.5v-34.2c0-4.7 3.8-8.5 8.5-8.5h25.6v42.7c0 4.7 3.8 8.5 8.5 8.5s8-3.8 8-8.5V256h222v42.7c0 4.7 4 8.5 8 8.5s8-3.8 8-8.5V256h86v42.7c0 4.7 4 8.5 8 8.5 5 0 8-3.8 8-8.5V256h26c4.5 0 8.3 3.8 8.3 8.5v59.8h-26c-4.8 0-8.6 3.8-8.6 8.5v76.8h-8c-4.8 0-8.7 3.8-8.7 8.5 0 5 4 9 8.6 9h26v60c0 5-4 9-9 9H204v-43c0-4-3.7-8-8.4-8s-8.7 4-8.7 9v42h-17v-43c0-4-4-8-9-8s-8 4-8 9v42h-17v-43c0-4.5-4-8.4-8-8.4s-8 4-8 8.7v42H43c-4.7 0-8.6-4-8.6-8.5v-34c0-4.8-3.6-8.7-8.3-8.7s-8 4-8 8.7v34c0 14.2 12 25.7 26 25.7h426c14 0 26-11.4 26-25.5v-60c0-11-9-17-17-17v-68.3h17c9 0 17-6 17-17V265c0-14-11-25.7-25-25.7z"/><path d="M332.8 426.7c4.7 0 8.5-4 8.5-8.6s-3.8-8-8.5-8h-94v-68h119.6v128c0 4 1.7 6 4.5 8 2 2 6 2 8 0l21-14 21 14c1 1 3 2 4 2s3 0 4-1c3-1 4-4 4-8V342h8c4 0 8-4 8-8.6s-3.8-8.5-8.5-8.5H25c-14-1-25 10-25 25v51c0 14 11.5 25 25.6 25h307.2zm42.7-85.4h34v112l-12.2-8c-3-2-6.6-2-9.5 0l-12.3 8v-112zm-273 0H222v68.3H102.2v-68.3zM17 401v-51c0-5 3.7-8.7 8.6-8.7h59.7v68.3H25.6c-4.8 0-8.5-3.7-8.5-8.5z"/><path d="M179.2 358.4c-4.7 0-8.5 3.8-8.5 8.5v17c0 4 3.8 8 8.5 8s8.5-4 8.5-9v-17c0-5-3.8-9-8.5-9zm-34.2 0c-4.6 0-8.5 3.8-8.5 8.5v17c0 4 4 8 8.6 8 5 0 9-4 9-9v-17c0-5-4-9-8-9z"/></svg>
+													</div>
+													<span>Collection</span>
+										      </label>
+										    </div>
+										    <div class="option">
+										      <input name="type" type="radio" value="type-contributor" id="type-contributor">
+										      <label for="type-contributor">
+													<div id="iconeContributor">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M281.6 119.5c-4.7 0-8.5 3.8-8.5 8.5v51.2c0 4.7 4 8.5 9 8.5h34c5 0 9-3.8 9-8.5V128c0-4.7-4-8.5-8.5-8.5h-34zm25.6 51.2h-17v-34.2h17v34.2z"/><path d="M59.7 222c4.7 0 8.6-4 8.6-8.7v-128h375.4v128c0 4.7 4 8.6 8.6 8.6 4.7 0 8.5-4 8.5-9V77c0-4.7-3.8-8.5-8.5-8.5H256V17h42.7v17H273c-4.6 0-8.5 4-8.5 8.7 0 4.7 4 8.5 8.6 8.5h35c4.8 0 8.6-3.8 8.6-8.5V8.5c0-4.7-4-8.5-8.5-8.5h-60c-5 0-9 3.8-9 8.5v59.8H59.7C55 68.3 51 72 51 76.8v136.5c0 4.7 4 8.6 8.6 8.6z"/><path d="M367 119.5c-4.8 0-8.6 3.8-8.6 8.5v51.2c0 4.7 3.8 8.5 8.5 8.5h34c4 0 8-3.8 8-8.5V128c0-4.7-4-8.5-8.7-8.5h-34zm25.5 51.2h-17v-34.2h17v34.2zm111 324.3H8.5c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5h495c4.7 0 8.5-3.8 8.5-8.5s-3.8-8.6-8.5-8.6zm-187.8-51.3c4.7 0 8.6-3.8 8.6-8.5V315.7c0-2.2-1-4.4-2.5-6-.8-.8-20-19.6-65.8-19.6s-65 19-65.8 20c-1.6 2-2.5 4-2.5 6v120c0 4.8 4 8.6 8.6 8.6s8.5-4 8.5-8.5V320c5.2-3.7 18.7-11 42.7-12.5v85c-4.7 0-8.6 4-8.6 8.6s3 9 8 9v26c0 4.8 4 8.6 8.2 8.6s8.4-4 8.4-8.5v-26c4.7 0 8.6-4 8.6-8.5s-3.8-8.5-8.5-8.5v-85c24 1 37.5 8.4 42.7 12v115c0 4.7 3.6 8.5 8.3 8.5zm-162 25.6c0 4.7 3.7 8.6 8.4 8.6h188c5 0 9-4 9-9s-4-9-8.3-9H162c-4.6 0-8.4 4-8.4 8.5z"/><path d="M42.7 460.8c-4.7 0-8.6 3.8-8.6 8.5s4 8.6 9 8.6h85c5 0 9-4 9-9s-4-9-8.4-9H120V256h273v204.8h-9c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.6 8.5 8.6h85.3c4.7 0 8.6-4 8.6-9s-4-9-9-9h-9V256h8.4c4.7 0 8.6-3.8 8.6-8.5s-4-8.6-8.6-8.6h-426c-4.7 0-8.6 3-8.6 8s4 8.2 9 8.2h8.4V460H43zm367-204.8h34v204.8h-34V256zm-341.4 0h34v204.8h-34V256zM111 119.5c-4.8 0-8.6 3.8-8.6 8.5v51.2c0 4.7 3.8 8.5 8.5 8.5h34c4 0 8-3.8 8-8.5V128c0-4.7-4-8.5-8.7-8.5h-34zm25.5 51.2h-17v-34.2h17v34.2zm59.8-51.2c-4.7 0-8.6 3.8-8.6 8.5v51.2c0 4.7 4 8.5 8.6 8.5h34c4.8 0 8.6-3.8 8.6-8.5V128c0-4.7-4-8.5-9-8.5h-34zm25.6 51.2h-18v-34.2h17v34.2z"/></svg>
+													</div>
+													<span>Contributor</span>
+										      </label>
+										    </div>
+										</div>
+									</div>
+
+									
+								</div>
+								 <input type="reset" value="Reset">
+							</form>
+					</div>	
+				</div>
+				<button type="button" id="searchButton"></button>	
+			</div>
+
+			<div class="menuoptions">
+				<div class="closeMenu"><div class="hotspot"></div></div>
+				<!--  NIVEL 1 -->
+				<div class="menu_level_01">
+					<nav>
+						<a id="option01_0" href="">Advanced Search</a>
+						<a id="option01_1" href="">Blog</a>
+						<a id="option01_2" class="sub" href="#menuoptions_02_2" href="">Store</a>
+
+						<a id="option01_3" href="">Help</a>
+						<a id="option01_4" class="sub" href="#menuoptions_02_4">Connect</a>
+						<a id="option01_5" href="">About</a> <!-- esse menu junta about e tecnical -->
+						<a id="option01_6" class="sub" href="#menuoptions_02_6">Usage</a>
+						<a id="option01_7" class="sub" href="#menuoptions_02_7">Projects</a>
+					</nav>
+				</div>
+				<!--  NIVEL 2 -->
+				<div class="menu_level_02" id="menuoptions_02_2">
+					<span class="label_menu">Store</span>
+					<span class="label_back">Back</span>
+					<nav>
+						<a class="level_02" href="">T-Shirts & Clothing</a>
+						<a class="level_02" href="">Drinkware</a>
+						<a class="level_02" href="">Stickers, Flair & Gifts</a>
+						<a class="level_02" href="">Home Decor</a>					
+					</nav>
+				</div>
+
+				<div class="menu_level_02" id="menuoptions_02_4">
+					<span class="label_menu">Connect</span>
+					<span class="label_back">Back</span>
+					<nav>
+						<a class="level_02" href="destino.html">Get Involved</a>
+						<a class="level_02" href="">Members & Affiliates</a>
+						<a class="level_02" href="">Contact Us</a>
+						<a class="level_02" href="">Press Room</a>
+						<a class="level_02" href="">Get Social with BHL</a>
+						<a class="level_02" href="">Events</a>						
+					</nav>
+				</div>
+				<div class="menu_level_02" id="menuoptions_02_6">
+					<span class="label_menu">Usage</span>
+					<span class="label_back">Back</span>
+					<nav>
+						<a class="level_02" href="">Terms of Use</a>
+						<a class="level_02" href="">Privacy Statement</a>
+						<a class="level_02" href="">Licensing & Copyright</a>
+						<a class="level_02" href="">Permissions</a>
+						<a class="level_02" href="">Logos</a>
+					</nav>
+				</div>					
+				<div class="menu_level_02" id="menuoptions_02_7">
+					<span class="label_menu">Projects</span>
+					<span class="label_back">Back</span>
+					<nav>
+						<a class="level_02" href="">Current</a>
+						<a class="level_02" href="">Past</a> 					
+					</nav>
+				</div>			
+			</div>
+		</header>
+
+
+
+
+<div id="conteinerBody">
+
+	<div id="conteinerBody2">
+
+		<div id="explore" class="conteinerSection">
+			<div class="content">
+				<div  id="coverLabel" class="flexRow">
+					<a href="#about" class="flexRow">
+						<span class="btCoverLabel"></span>
+						<span>EXPLORE<br>THE<br>BIODIVERSITY</span>
+					</a>	
+				</div>
+			</div>
+		</div>
+
+		<div id="about" class="conteinerSection" >
+			<div class="content flexColumn">
+				<div class="rowSimples">
+					<h2 class="bgDark left">INSPIRING DISCOVERY THROUGH <br><strong>FREE ACCESS TO BIODIVERSITY KNOWLEDGE.</strong></h2>
+				</div>
+				<div class="rowSimples">
+					<p class="bgDark"> The Biodiversity Heritage Library improves research methodology by collaboratively making biodiversity literature openly available to the world as part of a global biodiversity community.</p>
+					<p class="bgDark">BHL also serves as the foundational literature component of the Encyclopedia of Life.</p>
+				</div>
+				<div class="about_img">
+					<img src="img/iguana.png" alt="">
+				</div>				
+			</div>
+		</div>
+
+		<div id="todayPicks" class="conteinerSection">
+			<div class="content flexColumn">
+				<div class="rowSimples">
+					<h2><strong>TODAY'S</strong> PICKS</strong></h2>
+				</div>
+				<div class="conteinerPicks flexRow">
+					<a href="" class="pick"><img src="img/galeria/dictionnaireuniv14orbi_0181.jpg" alt=""><div class="frame"></div></a>
+					<a href="" class="pick"><img src="img/galeria/35247840853_198a655224_z.jpg" alt=""><div class="frame"></div></a>
+					<a href="" class="pick"><img src="img/galeria/35922987601_1a9f110d7c_z.jpg" alt=""><div class="frame"></div></a>
+					<a href="" class="pick"><img src="img/galeria/diesugthierein166schr_0227.jpg" alt=""><div class="frame"></div></a>
+					<a href="" class="pick"><img src="img/galeria/36057968895_9d02484012_z.jpg" alt=""><div class="frame"></div></a>
+				</div>
+				<div class="">
+					<a href="terra.com.br" class="convergenceButton flexRow"><span>VIEW MORE ON FLICKR</span></a>
+				</div>					
+			</div>
+		</div>
+
+		<div id="blog" class="conteinerSection">
+			<div class="content flexColumn">
+				<div class="rowSimples">
+					<h2><strong>NEW</strong> on the blog</strong></h2>
+				</div>
+
+				<div class="conteinerPosts">
+
+					<div class="post" id="post_01">
+						<div class="wirePost">
+							<div class="postinfo"><span class="fioinfoE"></span><span><p>Aug 12, 2017</p></span><span class="fioinfoD"></span></div>
+							<div class="postText flexColumn">
+								<a href="#">Bringing together primary and secondary sources on the United States South Seas </a>
+							</div>
+							<div class="nav_prev_next">
+								<a href="#" class="lb-prev"></a>
+								<a href="#" class="lb-next"></a>
+							</div>
+						</div>
+
+						<div class="postPic">
+							<img src="img/blog/01peixe.jpg" alt="">
+							<img class="quadrado" src="img/blog/01_peixe_quadrado.jpg" alt="">
+						</div>
+					</div>
+
+
+					<div class="post" id="post_02">
+						<div class="wirePost">
+							<div class="postinfo"><span class="fioinfoE"></span><span><p>Jan 24, 2017</p></span><span class="fioinfoD"></span></div>
+							<div class="postText flexColumn">
+								<a href="#">The Final Contribution of Sir William Jardine, Scottish Ornithologist</a>
+							</div>
+							<div class="nav_prev_next">
+								<a href="#" class="lb-prev"><p> </p></a>
+								<a href="#" class="lb-next"><p> </p></a>
+							</div>
+						</div>
+
+						<div class="postPic">
+							<img src="img/blog/coruja_retangular.jpg" alt="">
+							<img class="quadrado" src="img/blog/coruja_quarada.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="post" id="post_03">
+						<div class="wirePost">
+							<div class="postinfo"><span class="fioinfoE"></span><span><p>Jan 24, 2017</p></span><span class="fioinfoD"></span></div>
+							<div class="postText flexColumn">
+								<a href="#">BHL funded by NEH to reveal the Art of Life</a>
+							</div>
+							<div class="nav_prev_next">
+								<a href="#" class="lb-prev"><p> </p></a>
+								<a href="#" class="lb-next"><p> </p></a>
+							</div>
+						</div>
+
+						<div class="postPic">
+							<img src="img/blog/flor_horizontal.jpg" alt="">
+							<img class="quadrado" src="img/blog/flor_quadrado.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="post" id="post_04">
+						<div class="wirePost">
+							<div class="postinfo"><span class="fioinfoE"></span><span><p>Jan 24, 2017</p></span><span class="fioinfoD"></span></div>
+							<div class="postText flexColumn">
+								<a href="#">Book of the Week: Floral Masterpiece from Biodiversity Heritage Library on iTunes U</a>
+							</div>
+							<div class="nav_prev_next">
+								<a href="#" class="lb-prev"><p> </p></a>
+								<a href="#" class="lb-next"><p> </p></a>
+							</div>
+						</div>
+
+						<div class="postPic">
+							<img src="img/blog/floralretangular.jpg" alt="">
+							<img class="quadrado" src="img/blog/buquet_quadrado.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="post" id="post_05">
+						<div class="wirePost">
+							<div class="postinfo"><span class="fioinfoE"></span><span><p>Jan 24, 2017</p></span><span class="fioinfoD"></span></div>
+							<div class="postText flexColumn">
+								<a href="#">BHL Surpasses 40 Million Pages!</a>
+							</div>
+							<div class="nav_prev_next">
+								<a href="#" class="lb-prev"><p> </p></a>
+								<a href="#" class="lb-next"><p> </p></a>
+							</div>
+						</div>
+
+						<div class="postPic">
+							<img src="img/blog/jaguar_horizontal.jpg" alt="">
+							<img class="quadrado" src="img/blog/jaguar_quadrado.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="">
+					<a href="http://blog.biodiversitylibrary.org/" target="_blank" class="convergenceButton flexRow"><span>VIEW MORE BLOG POSTS</span></a>
+				</div>						
+			</div>
+		</div>
+
+		<div id="store" class="conteinerSection">
+			<div class="content flexColumn">
+				<div class="rowSimples">
+					<h2><strong>BHL</strong> STORE</h2>
+				</div>
+				<div class="rowCentralizado flexRow conteinerstore">
+					<a href="#" id="clothing" class="botao_animado flexColumn trasitions">
+						<div><img src="img/svg/clothing.svg" alt=""></div>
+						<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+						<div class="label">T-Shirts & Clothing</div>
+					</a>
+					<a href="#" id="drinkware" class="botao_animado flexColumn trasitions">
+						<div><img src="img/svg/drinkware.svg" alt=""></div>
+						<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+						<div class="label">Drinkware</div>
+					</a>
+					<a href="#" id="gifts" class="botao_animado flexColumn trasitions">
+						<div><img src="img/svg/gifts.svg" alt=""></div>
+						<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+						<div class="label">Stickers, Flair & Gifts</div>
+					</a>
+					<a href="#" id="decor" class="botao_animado flexColumn trasitions">
+						<div><img src="img/svg/decor.svg" alt=""></div>
+						<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+						<div class="label">Home Decor</div>
+					</a>
+				</div>
+				<div class="rowCentralizado flexRow">
+					<a href="terra.com.br" class="convergenceButton fundoescuro flexRow"><span>View All Products</span></a>
+				</div>				
+			</div>
+
+		</div>
+
+		<div id="twitter" class="conteinerSection">
+			<div class="content flexColumn"> <!-- aqui era centralizado a propriedade flex -->
+				<div class="rowSimples">
+					<h2><strong>BHL</strong> on twitter</h2>
+				</div>
+				<div class="tweetConteiner flexColumn conteinertwitter">
+					<div class="flexRow rowTweet">
+						<div class="avatar"><img src="" alt=""></div>
+						<div class="tweet">
+							<p><a class="twtr-user" href="http://twitter.com/intent/user?screen_name=BioDivLibrary" target="_blank">BioDivLibrary</a> <a class="tweet-url username" href="http://twitter.com/rdmpage" target="_blank">@rdmpage</a> <a class="tweet-url username" href="http://twitter.com/Pam_McClanahan" target="_blank">@Pam_McClanahan</a> Regarding title, SANBI is working to resolve some metadata issues to allow ingest. I'll se… <a rel="nofollow" href="https://t.co/KMohoI3t1j" target="_blank">twitter.com/i/web/status/8…</a></p><p><a class="twtr-timestamp" href="http://twitter.com/BioDivLibrary/status/891633513883095041" time="Sun Jul 30 2017 12:16:10 +0000 " target="_blank">1 hour ago</a> · <a class="twtr-fav" href="http://twitter.com/intent/favorite?tweet_id=891633513883095041" target="_blank">favorite</a></p>
+						</div>
+					</div>
+
+					<div class="flexRow rowTweet">
+						<div class="avatar"><img src="" alt=""></div>
+						<div class="tweet">
+							<p><a class="twtr-user" href="http://twitter.com/intent/user?screen_name=BioDivLibrary" target="_blank">BioDivLibrary</a> <a class="tweet-url username" href="http://twitter.com/rdmpage" target="_blank">@rdmpage</a> <a class="tweet-url username" href="http://twitter.com/Pam_McClanahan" target="_blank"></a><a class="tweet-url username" href="http://twitter.com/Pam_McClanahan" target="_blank">@Pam_McClanahan</a> Thanks, Rod! I will make sure <a class="tweet-url username" href="http://twitter.com/Pam_McClanahan" target="_blank"></a><a class="tweet-url username" href="http://twitter.com/Pam_McClanahan" target="_blank">@Pam_McClanahan</a> gets that feedback.</p>
+							<p><a class="twtr-timestamp" href="http://twitter.com/BioDivLibrary/status/891633084327751680" time="Sun Jul 30 2017 12:14:27 +0000 " target="_blank">1 hour ago</a> · <a class="twtr-fav" href="http://twitter.com/intent/favorite?tweet_id=891633084327751680" target="_blank">favorite</a></p>
+						</div>
+					</div>
+
+					<div class="flexRow rowTweet">
+						<div class="avatar"><img src="" alt=""></div>
+						<div class="tweet">
+							<p><a class="twtr-user" href="http://twitter.com/intent/user?screen_name=BioDivLibrary" target="_blank">BioDivLibrary</a> RT <a class="tweet-url username" href="http://twitter.com/bhl_au" target="_blank">@bhl_au</a>: The Dugong (lady of the sea) was first described by P.L.S. Müller in 1776. <a rel="nofollow" href="https://t.co/ZBAu9mRYNu" target="_blank">biodiversitylibrary.org/item/208759#pa…</a> via <a class="tweet-url username" href="http://twitter.com/BioDivLibrary" target="_blank">@BioDivLibrary</a> &amp; @NHM_Lo…</p>
+							<p><a class="twtr-timestamp" href="http://twitter.com/BioDivLibrary/status/891419465858068481" time="Sat Jul 29 2017 22:05:37 +0000 " target="_blank">15 hours ago</a> · <a class="twtr-fav" href="http://twitter.com/intent/favorite?tweet_id=891419465858068481" target="_blank">favorite</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="rowCentralizado flexRow">
+					<a href="#" class="convergenceButton flexRow"><span> BHL TWITTER COMMUNITY </span></a>
+				</div>								
+			</div>		
+		</div>
+
+		<div id="conected" class="conteinerSection">
+			<div class="content flexColumn">
+				<div class="wire flexColumn">
+				<div class="chanels flexColumn">
+					<h2 class="bgDark"><strong>STAY</strong> CONNECTED</h2>
+					<p class="bgDark">Keep up to date with the latest news via these social media platforms.</p>
+					<div class="social flexRow">
+						<a href="https://www.facebook.com/BioDivLibrary" id="Facebook" target="_blank"><img src="img/svg/face.svg" alt=""></a>
+						<a href="https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=BioDivLibrary" id="twitterbutton" target="_blank"><img src="img/svg/twitter.svg" alt=""></a>
+						<a href="https://www.flickr.com/photos/biodivlibrary/sets/" id="flickr" target="_blank"><img src="img/svg/flickr.svg" alt=""></a>
+						<a href="https://br.pinterest.com/biodivlibrary/" id="pinterest" target="_blank"><img src="img/svg/pinterest.svg" alt=""></a>
+						<a href="https://www.instagram.com/biodivlibrary/" id="instagram target="_blank""><img src="img/svg/instagram.svg" alt=""></a>
+						<a href="https://biodivlibrary.tumblr.com/" id="Tumblr" target="_blank"><img src="img/svg/tumblr.svg" alt=""></a>
+						<a href="https://www.youtube.com/user/BioHeritageLibrary" id="Youtube" target="_blank"><img src="img/svg/youtube.svg" alt=""></a>	
+					</div>
+				</div>
+
+					<div class="mailing flexColumn">
+						<h2><strong>JOIN</strong> OUR MAILING</h2>
+						<p class="">Sign up to receive the latest news, content highlights, and promotions.</p>
+						<a href="#" id="clothing" class="botao_animado flexColumn trasitions">
+							<div><img src="img/svg/send-mail.svg" alt=""></div>
+							<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+							<div class="label">Sing up</div>
+						</a>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+		<div id="nowOnline" class="conteinerSection" class=" conteiner nowOnline flexColumn">
+			<div class="content flexColumn">
+				<div class="row-nowOnline">
+					<h2 class="bgDark"><strong>NOW</strong> ONLINE</h2>
+					<div class="table flexColumn">
+						<div class="flexRow rowTable">
+							<div class="numero">123,347</div><div class="label">Titles</div>
+						</div>
+						<div class="flexRow rowTable">
+							<div class="numero">206,649</div><div class="label">Volumes</div>
+						</div>
+						<div class="flexRow rowTable">
+							<div class="numero">52,421,492</div><div class="label">Pages</div>
+						</div>					
+					</div>
+					<a href="#" id="decor" class="botao_animado flexColumn trasitions bgDark">
+						<div><img src="img/svg/business.svg" alt=""></div>
+						<div class="botao_fio flexRow"> <div class="fioLateral"></div><div class="fioCentral trasitions"></div><div class="fioLateral"></div></div>
+						<div class="label">Recent Additions</div>
+					</a>
+				</div>
+
+				<div class="row-nowOnline">
+					<h2 class="bgDark">HELP <strong>SUPPORT BHL</strong></h2>
+					<p class="bgDark"> BHL's existence depends on the financial support of its patrons. Help us keep this free resource alive! </p>
+					<div class="rowCentralizado flexRow">
+						<a href="#" class="convergenceButton_bgDark flexRow"><span>DONATE NOW</span></a>
+					</div>
+				</div>		
+			</div>
+		</div>
+	
+	</div>	
+	</div>
+		<footer>
+			<nav class="flex-list">
+				<ul>
+					<li><a href="" target="_blank">Data Exports</a></li>
+					<li><a href="" target="_blank">Developer Tools</a></li>
+					<li><a href="" target="_blank">Members</a></li>
+					<li><a href="" target="_blank">Licensing & Copyright</a></li>
+					<li><a href="" target="_blank">Terms of Use</a></li>
+					<li><a href="" target="_blank">Privacy</a></li>
+				</ul>	
+			</nav>
+			
+		</footer>
+	<script src="js/scrolltarget.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/blog.js"></script>
+
+
+	</body>
+</html>

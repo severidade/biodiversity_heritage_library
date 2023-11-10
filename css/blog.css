@@ -1,0 +1,128 @@
+.conteinerPosts { position: relative; display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; min-height: calc(100vh - 100px); background: #fff; margin-bottom: 20px;}
+
+/* Proposta de componente misto - exibe somente um elemanto no celular e todos em telas de formato maior */
+.post { width: 100%;  height: calc(100vh - 100px); position: relative; display: none; }
+
+/* classe adicionada por jquery */
+.postActive { display: inherit; position: absolute; top: 0px; left: 0px; }
+
+.postPic { width: 100%; height:50%; overflow: hidden; position: absolute; bottom: 0px; right: 0px;} 
+    .postPic img { object-fit: cover; width: 100%; height: 100%; }
+
+.wirePost { z-index: 2; position: absolute; top: 20px; left: 20px; border-left: solid 2px #0F1626; border-right: solid 2px #0F1626; border-bottom: solid 2px #0F1626; width: calc(100% - 40px); height: calc(100% - 40px);}
+.wirePost::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(50% + 20px);
+    background: white;
+    top: -20px;
+    z-index: -1;
+}
+
+/* informação Data Publicação */
+.postinfo { display: flex; flex-direction: row; flex-wrap:  wrap; width: 100%; height: 20px;}
+.postinfo p { font-family: 'Vollkorn', serif; font-size: 1.5em; font-style: italic; letter-spacing: 0.04em; margin-top: -10px; padding: 0 10px;}
+span.fioinfoE { width: 10px; border-top: solid 2px #0F1626;}
+span.fioinfoD { flex-grow: 1; border-top: solid 2px #0F1626;}
+
+.postText a{ font-size: 1.5em; font-weight: 400; text-align: left; margin-bottom: 15px; color: #0F1626; display: block; margin: 0; padding: 0 10px; }
+
+.nav_prev_next { position: absolute; width: 100%;/* background: pink;*/ height: 50px; top: 50%; margin-top: -25px;}
+.lb-prev, .lb-next {display: block; position: absolute; width: 100px; height: 50px; }
+.lb-prev {left: 0px; background: url(../img/svg/prev.svg) #0F1626 no-repeat; background-size: 20%; background-position: center;}
+.lb-next {right: 0px; background: url(../img/svg/next.svg) #0F1626 no-repeat; background-size: 20%; background-position: center;}
+
+
+
+@media screen and (min-width: 425px) {
+    .conteinerPosts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 300px;
+        background: inherit;
+        margin-bottom: 0;
+    }
+    .postPic {
+    width: calc(100% - 40px);
+    height: calc(50% - 20px);
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+    .post { 
+        width: 50%;
+        height: 270px; 
+        position: relative; 
+        display: inherit;
+    }
+.wirePost::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(50% + 20px);
+    background: none;
+    top: -20px;
+    z-index: -1;
+}
+    .postText { width: 100%;}
+    .nav_prev_next { display: none;}
+}
+/* @media screen and (min-width: 800px) and (min-height: 585px) */
+@media screen and (min-width: 2000px) {
+.conteinerPosts { width: 100%; }
+    .post { 
+        width: calc((40vw - 40px) / 2 );
+        height: calc((40vw - 80px) / 4 );
+        position: relative; 
+        display: inherit;
+        margin-bottom: 20px;
+       
+    }
+    .postPic img:first-of-type { display: none; }
+    .postPic img { display: inherit; }
+
+.postPic {
+    width: calc((40vw - 80px) / 4 );
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.postText { width: 50%;}
+
+
+}
+/*
+@media screen and (min-width: 1000px) {
+
+    .post { 
+        width: 33.33%;
+        height: calc((100vw - 20px) / 6 );
+        position: relative; 
+        display: inherit;
+        margin-bottom: 20px;
+       
+    }
+    .postPic img:first-of-type { display: none; }
+    .postPic img { display: inherit; }
+
+.postPic {
+    width: calc((100vw - 20px) / 6 );
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.postText { width: calc((100vw - 170px) / 6 );}
+
+
+}*/
